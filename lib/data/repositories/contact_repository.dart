@@ -1,8 +1,9 @@
 import '../../domain/models/contact_model.dart';
+import '../../util/result.dart';
 
 abstract class ContactRepository {
-  Future<void> addContact(ContactModel contact);
-  Future<void> updateContact(ContactModel contact);
-  Future<void> deleteContact(ContactModel contact);
-  Future<List<ContactModel>> getContacts();
+  Future<Result<void>> addContact(ContactModel contact);
+  Future<Result<void>> updateContact(ContactModel contact);
+  Future<Result<void>> deleteContact(ContactModel contact);
+  Future<Result<List<ContactModel>>> getContacts();
 }
